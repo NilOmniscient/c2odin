@@ -114,3 +114,16 @@ Collide :: proc(A, B: ^Shape, ax, bx: ^Matrix, m: ^CollisionManifold) {
       }
   }
 }
+CastRay :: proc(A: ^Ray, B: ^Shape, bx: ^Matrix, out: ^RayCast) -> bool {
+  switch(B.Type) {
+    case Circle:
+      return RaytoCircle(A, cast(^Circle)B, out)
+    case AABB:
+      return RaytoAABB(A, cast(^AABB)B, out)
+    case Capsule:
+      return RaytoCapsule(A, cast(^Capsule)B, out)
+    case Polygon:
+      return RaytoPoly(A, cast(^Polygon)B, bx, out)
+  }
+  return false // Shouldn't be able to hit this
+}
