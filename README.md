@@ -23,3 +23,5 @@ are the shapes, and the collision functions.
 * Create<SHAPE> -> Creates the various shapes
 * GJK           -> Runs the GJK algorithm to calculate closest point between two shapes.
 * TOI           -> Computes the time of impact between two shapes. 
+
+For other information, please check out the original. 
