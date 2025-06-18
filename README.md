@@ -20,7 +20,7 @@ are the shapes, and the collision functions.
 * Collide       -> Constructs a manifold to describe how the shapes hit
 * Collided      -> bool yes/no collision check. 
 * CastRay       -> Casts a ray at a shape and returns collision details. 
-* Create<SHAPE> -> Creates the various shapes
+* ```Create<SHAPE>``` -> Creates the various shapes
 * GJK           -> Runs the GJK algorithm to calculate closest point between two shapes.
 * TOI           -> Computes the time of impact between two shapes. 
 
